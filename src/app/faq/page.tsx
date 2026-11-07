@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { faqs, irrigation, site } from "@/content/site";
+import { faqs, faqsComingSoon, irrigation, site } from "@/content/site";
 import { Container, FaqList, JsonLd, PageHeader, SectionHeading } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "HOA FAQs",
-  description: "Answers to common Red Hawk Canyon HOA questions: annual dues, what dues pay for, architectural approval, fences, parking, and pets.",
+  description: "Answers to common Red Hawk Canyon HOA questions, including annual dues and irrigation.",
   alternates: { canonical: "/faq" },
 };
 
@@ -29,6 +29,7 @@ export default function FaqPage() {
         <section aria-labelledby="general">
           <SectionHeading id="general" title="General questions" />
           <FaqList items={faqs} />
+          {faqsComingSoon ? <p className="mt-4 text-muted">{faqsComingSoon}</p> : null}
         </section>
         <section aria-labelledby="irrigation-faqs" className="mt-16">
           <SectionHeading
@@ -51,7 +52,7 @@ export default function FaqPage() {
         data={{
           "@context": "https://schema.org",
           "@type": "FAQPage",
-          mainEntity: [...faqs, ...irrigation.faqs].map((f) => ({
+          mainEntity: [...faqs, ...irrigation.faqs].filter((f) => !/^coming soon/i.test(f.a)).map((f) => ({
             "@type": "Question",
             name: f.q,
             acceptedAnswer: { "@type": "Answer", text: f.a },

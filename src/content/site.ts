@@ -61,9 +61,9 @@ export type Announcement = {
 /** Newest first. The home page shows anything that has not expired. */
 export const announcements: Announcement[] = [
   {
-    date: "2025-10-01",
+    date: "2026-10-01",
     title: "Irrigation pump shut-off",
-    body: "Reminder: the estimated shut-off of the neighborhood irrigation pump is the morning of Friday, October 10th. Plan to have your lines blown out after that date.",
+    body: "Reminder: the estimated shut-off of the neighborhood irrigation pump is the morning of Saturday, October 10, 2026. Plan to have your lines blown out after that date.",
     link: { href: "/irrigation#blowout", label: "Line blowout services" },
   },
 ];
@@ -98,21 +98,11 @@ export const irrigation = {
     "Red Hawk Canyon shares a single irrigation pump, so each home is assigned a one-hour watering window. Please set your controller to run only during your assigned time so every lot gets enough pressure.",
   faqs: [
     {
-      q: "Where can I find my watering time?",
-      a: "Use the schedule on this page. Type your address or last name in the search box to jump straight to your time slot.",
+      q: "Where can I find the irrigation watering schedule?",
+      a: "See the watering schedule at the top of the Irrigation page. Type your address or last name in the search box to jump straight to your time slot.",
     },
-    {
-      q: "What should I do if my irrigation isn't working?",
-      a: "First check that your controller is set to your assigned window and that your zone valves are open. If the whole neighborhood seems to have low or no pressure, email the board at redhawkcanyonhoa@gmail.com so we can check the pump.",
-    },
-    {
-      q: "What should I do if I have a broken pipe?",
-      a: "If you can do so safely, shut off the irrigation valve to your lot to stop the leak, then email the board at redhawkcanyonhoa@gmail.com with your address and a description of the problem.",
-    },
-    {
-      q: "When does the irrigation water get turned on and off?",
-      a: "Operating hours are set each year. The board posts the spring start-up and fall shut-off dates in the news section on the home page.",
-    },
+    { q: "What should I do if my irrigation isn't working?", a: "Coming soon." },
+    { q: "What should I do if I have a broken pipe?", a: "Coming soon." },
   ] satisfies Faq[],
   blowoutVendors: [
     {
@@ -138,7 +128,7 @@ export const irrigation = {
 
 export const spraying = {
   intro:
-    "Information about neighborhood weed and pest spraying services is coming soon. If you have questions in the meantime, contact the board.",
+    "Coming soon.",
 };
 
 /* -------------------------------------------------------------------------- */
@@ -148,37 +138,12 @@ export const spraying = {
 export const faqs: Faq[] = [
   {
     q: "What are the annual HOA dues?",
-    a: "Dues are $200 per year, due on June 1st. Assessments are equal for every lot.",
-  },
-  {
-    q: "What do my dues pay for?",
-    a: "Dues cover common expenses: operating and maintaining the irrigation pump and system, the storm water retention pond, the entryway sign and lighting, insurance on common areas, a reserve fund for future repairs, and the cost of running the association.",
-  },
-  {
-    q: "Do I need approval before changing the outside of my house?",
-    a: "Yes. Under the CC&Rs, new construction and any exterior alterations, additions, or changes in exterior materials or colors need written approval from the Aesthetic Control Committee first. Fences, screen walls, and exterior lighting also need approval.",
-  },
-  {
-    q: "Are there rules about fences?",
-    a: "Fences need prior written approval. They are allowed only in backyards, must be wood, brick, stucco, vinyl, or iron, must look finished on both sides, and are limited to six feet tall unless the committee approves otherwise.",
-  },
-  {
-    q: "Where can I park?",
-    a: "Each home must have off-street parking for at least two cars. On-street parking is for temporary use only. RVs, boats, trailers, and vehicles too large for the garage must be screened from view behind the setback.",
-  },
-  {
-    q: "Are pets allowed?",
-    a: "Traditional household pets are allowed. Pets must stay on your lot, be leashed when out in the neighborhood, and be cleaned up after.",
-  },
-  {
-    q: "When is the annual homeowners meeting?",
-    a: "The board posts the yearly meeting on the calendar page with the date, time, and location. It was last held in early June.",
-  },
-  {
-    q: "How do I contact the board?",
-    a: "Email redhawkcanyonhoa@gmail.com. A board member will get back to you.",
+    a: "$200 per year, due on June 1st.",
   },
 ];
+
+/** Shown under the general FAQs until more are added. Set to "" to hide. */
+export const faqsComingSoon = "More FAQs coming soon.";
 
 /* -------------------------------------------------------------------------- */
 /* Board                                                                       */

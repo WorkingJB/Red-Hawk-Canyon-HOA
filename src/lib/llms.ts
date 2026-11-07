@@ -1,4 +1,4 @@
-import { announcements, board, ccrHighlights, documents, faqs, irrigation, nav, site, spraying } from "@/content/site";
+import { announcements, board, ccrHighlights, documents, faqs, faqsComingSoon, irrigation, nav, site, spraying } from "@/content/site";
 import { getIrrigationSchedule } from "@/lib/irrigation";
 import { calendarLinks, formatEventDate, formatEventTime, getEvents } from "@/lib/calendar";
 
@@ -7,7 +7,7 @@ const pageSummaries: Record<string, string> = {
   "/irrigation": "Irrigation watering schedule by address (one-hour window per home), irrigation FAQs, fall line-blowout services.",
   "/calendar": "Upcoming and past HOA events with subscribe links (Google Calendar, iCal).",
   "/documents": "CC&Rs (Declaration of Covenants, Conditions & Restrictions) PDF and plain-language highlights.",
-  "/faq": "Frequently asked questions: dues, approvals, fences, parking, pets, meetings.",
+  "/faq": "Frequently asked questions: annual dues and irrigation (more coming soon).",
   "/board": "Board of directors roster and contact.",
   "/spraying": "Weed and pest spraying services (details coming soon).",
   "/contact": "How to contact the board (email).",
@@ -80,6 +80,7 @@ export async function buildLlmsFullTxt() {
 
   out.push("## HOA FAQs", "");
   for (const f of faqs) out.push(`**${f.q}**`, f.a, "");
+  if (faqsComingSoon) out.push(faqsComingSoon, "");
 
   out.push("## CC&R highlights", "", "Plain-language summary. The recorded CC&Rs control if anything differs.", "");
   for (const h of ccrHighlights) {

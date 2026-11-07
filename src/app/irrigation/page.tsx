@@ -116,7 +116,7 @@ export default async function IrrigationPage() {
         data={{
           "@context": "https://schema.org",
           "@type": "FAQPage",
-          mainEntity: irrigation.faqs.map((f) => ({
+          mainEntity: irrigation.faqs.filter((f) => !/^coming soon/i.test(f.a)).map((f) => ({
             "@type": "Question",
             name: f.q,
             acceptedAnswer: { "@type": "Answer", text: f.a },

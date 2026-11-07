@@ -48,7 +48,7 @@ export default function ContactPage() {
         </ul>
         <Card className="mt-8">
           <p className="text-muted">
-            Many questions are already answered on the{" "}
+            You may also find answers on the{" "}
             <Link href="/faq" className="font-medium text-brand hover:underline">
               FAQ page
             </Link>{" "}

@@ -17,7 +17,7 @@ const quickLinks = [
   { href: "/irrigation", title: "Irrigation schedule", body: "Find your assigned watering time.", icon: Droplets },
   { href: "/calendar", title: "Event calendar", body: "Board meetings and the yearly HOA meeting.", icon: CalendarDays },
   { href: "/documents", title: "CC&Rs and documents", body: "Read the neighborhood's governing rules.", icon: FileText },
-  { href: "/faq", title: "HOA FAQs", body: "Dues, approvals, parking, and more.", icon: HelpCircle },
+  { href: "/faq", title: "HOA FAQs", body: "Annual dues and common questions.", icon: HelpCircle },
   { href: "/board", title: "Board members", body: "Who runs the association.", icon: Users },
   { href: "/spraying", title: "Spraying services", body: "Weed and pest spraying info.", icon: SprayCan },
 ];
