@@ -44,7 +44,7 @@ All other text lives in one file: [`src/content/site.ts`](src/content/site.ts). 
 
 ## Local development
 
-Requires Node 20.9 or newer.
+Requires Node 22.
 
 ```bash
 npm install
