@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Mail } from "lucide-react";
-import { site, spraying } from "@/content/site";
+import { photos, site, spraying } from "@/content/site";
 import { ButtonLink, Container, PageHeader } from "@/components/ui";
 
 export const metadata: Metadata = {
@@ -17,8 +17,8 @@ export default function SprayingPage() {
       <Container className="py-12">
         <div className="relative aspect-[16/9] overflow-hidden rounded-3xl shadow-lg">
           <Image
-            src="/images/street-sunset-wide.jpg"
-            alt="Red Hawk Canyon street and parking strips at sunset"
+            src={photos.riverfront.src}
+            alt={photos.riverfront.alt}
             fill
             sizes="(min-width: 1152px) 1152px, 100vw"
             className="object-cover"

@@ -33,6 +33,7 @@ All other text lives in one file: [`src/content/site.ts`](src/content/site.ts). 
 - **FAQs**: edit `faqs` or `irrigation.faqs`.
 - **Blowout vendors**: edit `irrigation.blowoutVendors`.
 - **New documents**: drop the PDF in `public/documents/` and add an entry to `documents`.
+- **Photos**: images live in `public/images/` and are listed in `photos`. The current photos are from Wikimedia Commons under CC BY-SA licenses, which require the credit line the footer shows automatically. If you replace one with your own photo, update its entry (you can drop the author and license fields for photos you own).
 
 ## AI and search friendliness
 

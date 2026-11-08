@@ -224,3 +224,49 @@ export const ccrHighlights: { section: string; title: string; points: string[] }
     ],
   },
 ];
+
+/* -------------------------------------------------------------------------- */
+/* Photos                                                                      */
+/* -------------------------------------------------------------------------- */
+
+/**
+ * Photos used on the site. All come from Wikimedia Commons under Creative
+ * Commons licenses that require credit, which the footer shows automatically.
+ * If you swap in your own photos, update or remove the matching entry.
+ */
+export const photos = {
+  hero: {
+    src: "/images/columbia-river-dusk-porters-pond.jpg",
+    width: 1920,
+    height: 1081,
+    alt: "The Columbia River at dusk from Porters Pond in East Wenatchee, with city lights and snowy hills beyond",
+    title: "Columbia River Porters Pond",
+    author: "Thayne Tuason",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Columbia_River_Porters_Pond.jpg",
+  },
+  valley: {
+    src: "/images/saddle-rock-wenatchee-valley.jpg",
+    width: 1600,
+    height: 900,
+    alt: "View from the Saddle Rock Natural Area over Wenatchee and the Columbia River",
+    title: "Saddle Rock Natural Area",
+    author: "Steven Pavlov",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:2024-04-20_DJI_Saddle_Rock_Natural_Area_183658.jpg",
+  },
+  riverfront: {
+    src: "/images/columbia-river-riverfront-park.jpg",
+    width: 1920,
+    height: 1081,
+    alt: "Looking north up the Columbia River from the Wenatchee Riverfront Park dock",
+    title: "Looking north on Columbia River from Wenatchee Riverfront Park Dock",
+    author: "Thayne Tuason",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Looking_north_on_Columbia_River_from_Wenatchee_Riverfront_Park_Dock_Washington.jpg",
+  },
+} as const;

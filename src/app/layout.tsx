@@ -5,7 +5,7 @@ import "./globals.css";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { JsonLd } from "@/components/ui";
-import { site } from "@/content/site";
+import { photos, site } from "@/content/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     type: "website",
     siteName: site.name,
     locale: "en_US",
-    images: [{ url: "/images/neighborhood-sunset.jpg", width: 953, height: 725, alt: "Sunset over Red Hawk Canyon" }],
+    images: [{ url: photos.valley.src, width: photos.valley.width, height: photos.valley.height, alt: photos.valley.alt }],
   },
   twitter: { card: "summary_large_image" },
 };

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Mail } from "lucide-react";
-import { nav, site } from "@/content/site";
+import { nav, photos, site } from "@/content/site";
 import { Logo } from "./Logo";
 
 export function SiteFooter() {
@@ -37,6 +37,21 @@ export function SiteFooter() {
       <div className="border-t border-line">
         <p className="mx-auto max-w-6xl px-4 py-5 text-xs text-muted sm:px-6">
           © {new Date().getFullYear()} {site.legalName}, {site.city}, {site.state}. Run by volunteer board members.
+        </p>
+        <p className="mx-auto max-w-6xl px-4 pb-5 text-xs text-muted sm:px-6">
+          Photos (resized and cropped):{" "}
+          {Object.values(photos).map((p, i, all) => (
+            <span key={p.src}>
+              <a href={p.sourceUrl} className="underline hover:text-brand" target="_blank" rel="noopener noreferrer">
+                {p.title}
+              </a>{" "}
+              by {p.author},{" "}
+              <a href={p.licenseUrl} className="underline hover:text-brand" target="_blank" rel="noopener noreferrer">
+                {p.license}
+              </a>
+              {i < all.length - 1 ? "; " : "."}
+            </span>
+          ))}
         </p>
       </div>
     </footer>

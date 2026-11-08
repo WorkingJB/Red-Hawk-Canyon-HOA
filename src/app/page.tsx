@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { ArrowRight, CalendarDays, Droplets, FileText, HelpCircle, Megaphone, SprayCan, Users } from "lucide-react";
-import { announcements, home, site } from "@/content/site";
+import { announcements, home, photos, site } from "@/content/site";
 import { getEvents } from "@/lib/calendar";
 import { EventList } from "@/components/EventList";
 import { ButtonLink, Card, Container, SectionHeading } from "@/components/ui";
@@ -34,8 +34,8 @@ export default async function HomePage() {
       {/* Hero */}
       <section className="relative isolate overflow-hidden">
         <Image
-          src="/images/neighborhood-sunset.jpg"
-          alt="Sunset over the hills above Red Hawk Canyon"
+          src={photos.hero.src}
+          alt={photos.hero.alt}
           fill
           priority
           sizes="100vw"
@@ -141,13 +141,13 @@ export default async function HomePage() {
               ))}
             </dl>
           </div>
-          <div className="relative aspect-[4/5] overflow-hidden rounded-3xl shadow-lg sm:aspect-[4/3] lg:aspect-[4/5]">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-lg">
             <Image
-              src="/images/street-autumn.jpg"
-              alt="A tree in fall color along a Red Hawk Canyon street at sunset"
+              src={photos.valley.src}
+              alt={photos.valley.alt}
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover"
+              className="object-cover object-[30%_50%]"
             />
           </div>
         </Container>
